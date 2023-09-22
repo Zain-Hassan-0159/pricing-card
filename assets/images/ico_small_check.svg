@@ -1,0 +1,29 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="14" height="14">
+	<title>design_slider_digiposte-ai</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m470.9-270.78v-165.08c0-9.17-7.43-16.6-16.6-16.6h-489.31c-9.16 0-16.59 7.43-16.59 16.6v165.08z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp2">
+			<path d="m470.9-270.78v-165.08c0-9.17-7.43-16.6-16.6-16.6h-489.31c-9.16 0-16.59 7.43-16.59 16.6v165.08z"/>
+		</clipPath>
+	</defs>
+	<style>
+		.s0 { fill: #d1dbf8 } 
+		.s1 { fill: none;stroke: #0000ff;stroke-linecap: round;stroke-linejoin: round;stroke-width: .8 } 
+	</style>
+	<g id="OLD">
+	</g>
+	<g id="Calque 1">
+	</g>
+	<g id="ELEMENTS">
+		<path id="&lt;Path&gt;" class="s0" d="m13.6 7.1c0-3.7-3-6.7-6.7-6.7-3.6 0-6.6 3-6.6 6.7 0 3.6 3 6.6 6.6 6.6 3.7 0 6.7-3 6.7-6.6z"/>
+		<path id="&lt;Path&gt;" class="s1" d="m2.4 6.1l3.7 3.6 6.7-6.5"/>
+		<g id="&lt;Clip Group&gt;" clip-path="url(#cp1)">
+		</g>
+		<g id="&lt;Clip Group&gt;" clip-path="url(#cp2)">
+		</g>
+		<g id="&lt;Group&gt;">
+		</g>
+	</g>
+</svg>

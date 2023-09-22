@@ -1,0 +1,253 @@
+.access-offer-ruler{
+  font-family: "Montserrat", sans-serif;
+}
+.access-offer-ruler .offer-card .offer-card-inner {
+    max-width: 523px;
+    border: 1px solid #ccdaff;
+    border-radius: 17px;
+    /* padding: 32px 50px; */
+  }
+  .access-offer-ruler .offer-card .header{
+    padding: 32px 50px 0;
+    background-color: #eceff8;
+    border-top-right-radius: 17px;
+    border-top-left-radius: 17px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .offer-card-inner, .more-offer{
+    margin: auto;
+  }
+  .access-offer-ruler .offer-card .body{
+    padding: 10px 50px 10px;
+    border-bottom: 1px solid #dadada;
+  }
+
+  .access-offer-ruler .description{
+    padding: 10px 50px 32px;
+  }
+  .access-offer-ruler .offer-card .offer-card-inner .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .access-offer-ruler .offer-card .offer-card-inner .offer-quick-infos .offer-price-text {
+    font-weight: normal;
+  }
+  .access-offer-ruler .offer-card .offer-card-inner .offer-quick-infos .offer-price-text .txt-blue {
+    font-weight: 500;
+  }
+  .access-offer-ruler .offer-card .offer-card-inner ul {
+    margin-top: 10px;
+  }
+  .access-offer-ruler .offer-card .offer-card-inner ul li {
+    background-position: left center;
+    font-weight: normal;
+    line-height: 2;
+  }
+  .access-offer-ruler .offer-cartridge {
+    font-family: inherit;
+    font-size: 10px;
+    color: #414141;
+    background-color: #fbedac;
+    border: solid 1px #ffc105;
+    padding: 4px 8px;
+    border-radius: 10rem;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+  .access-offer-ruler .offer-name {
+    font-size: 21px;
+    line-height: 40px;
+    color: #393af1;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    margin-top: 0;
+  }
+  .access-offer-ruler .range {
+    margin-top: 45px;
+    margin-bottom: 15px;
+    position: relative;
+  }
+
+  .access-offer-ruler .range .max {
+    float: right;
+  }
+  .access-offer-ruler .rangeslider {
+    height: 11px;
+    background: #ccdaff;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+    position: relative;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .access-offer-ruler .rangeslider .rangeslider__fill {
+    background: #393af1;
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border-radius: 8px;
+    z-index: 99;
+  }
+  .access-offer-ruler .rangeslider .rangeslider__handle {
+    top: -50%;
+    width: 18px;
+    height: 18px;
+    border: none;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+    background: #393af1;
+    position: relative;
+    border-radius: 50%;
+    outline: 4px solid #ffc10536;
+  }
+  /* .access-offer-ruler .rangeslider .rangeslider__handle:after {
+    content: "";
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    background: #ffcd058a;
+
+  } */
+  .access-offer-ruler .rangeslider output {
+    color: #3a3a3a;
+    background: #ffc105;
+    display: block;
+    top: -50px;
+    position: absolute;
+    white-space: nowrap;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    left: 50%;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2.8em;
+    padding: 0 12px;
+    border-radius: 5px;
+  }
+  .access-offer-ruler .rangeslider output strong{
+    font-size: 17px;
+  }
+  .access-offer-ruler .rangeslider output:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid #ffc105;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    top: 90%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -1px;
+  }
+  .access-offer-ruler .offer_card_more .offer-card-inner {
+    width: auto !important;
+    padding: 32px 50px;
+    background: #f0f4ff;
+    border: 1px solid #ccdaff;
+  }
+  .access-offer-ruler .offer-quick-infos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5px;
+    align-items: baseline;
+  }
+  .access-offer-ruler .offer-quick-infos .offer-price {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    font-size: 27px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: #3d3d3d;
+  }
+  .access-offer-ruler .offer-quick-infos .offer-price-text {
+    color: #9d9d9d;
+    line-height: 18px;
+    font-size: 11px;
+  }
+  .access-offer-ruler .offer-quick-infos .offer-price-text .txt-blue {
+    color: #393af1;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .access-offer-ruler ul {
+    list-style: none;
+    padding: 0;
+  }
+  .access-offer-ruler ul li {
+    color: #9d9d9d;
+    font-size: 13px;
+    background-image: url("../images/ico_small_check.svg");
+    background-repeat: no-repeat;
+    background-position: left 4px;
+    padding-left: 1.5rem !important;
+  }
+  .access-offer-ruler .offer_cta {
+    text-align: center;
+    border: none;
+    padding: 6.5px 60px;
+    outline: none;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background-color: #3333ff;
+    color: #ffffff !important;
+    border-radius: 0.25rem;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+
+  .access-offer-ruler .more-offer{
+    max-width: 523px;
+    padding: 22px 32px;
+    border: 1px solid #ffc105;
+    border-radius: 17px;
+    margin-top: 18px;
+  }
+
+  .access-offer-ruler .more-offer h3{
+    font-size: 18px;
+    color: #414141;
+    margin: 0;
+  }
+
+  .access-offer-ruler .more-offer p{
+    font-size: 12px;
+    margin: 0;
+    color: #7b7a7a;
+  }
+
+  .access-offer-ruler .more-offer p a{
+    color: #7b7a7a;
+    text-decoration: underline;
+  }
