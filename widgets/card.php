@@ -228,7 +228,7 @@ class Elementor_pricingCard_Widget extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Button Text', 'elementor-pricing-card' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Inscrivez-vous' , 'elementor-pricing-card' ),
+				'default' => esc_html__( 'Souscrire' , 'elementor-pricing-card' ),
 				'label_block' => true,
 			]
 		);
@@ -275,12 +275,12 @@ class Elementor_pricingCard_Widget extends \Elementor\Widget_Base {
 			]
 		);
 
-        $this->add_control(
-			'bottom_block_link_title',
+		$this->add_control(
+			'bottom_block_link_title_addon',
 			[
-				'label' => esc_html__( 'Bottom Block Button Text', 'elementor-pricing-card' ),
+				'label' => esc_html__( 'Bottom Block Middle Text', 'elementor-pricing-card' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Contactez-nous' , 'elementor-pricing-card' ),
+				'default' => esc_html__( 'Contactez-nous pour une offre sur-mesure' , 'elementor-pricing-card' ),
 				'label_block' => true,
 			]
 		);
@@ -301,15 +301,7 @@ class Elementor_pricingCard_Widget extends \Elementor\Widget_Base {
 			]
 		);
 
-		$this->add_control(
-			'bottom_block_link_title_addon',
-			[
-				'label' => esc_html__( 'Bottom Block Button Text Addon', 'elementor-pricing-card' ),
-				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'pour une offre sur-mesure' , 'elementor-pricing-card' ),
-				'label_block' => true,
-			]
-		);
+
 
 		$this->end_controls_section();
 
@@ -318,31 +310,6 @@ class Elementor_pricingCard_Widget extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Style', 'elementor-pricing-card' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
-			]
-		);
-
-		$this->add_control(
-			'card_align',
-			[
-				'label' => esc_html__( 'Card Alignment', 'elementor-pricing-card' ),
-				'type' => \Elementor\Controls_Manager::CHOOSE,
-				'options' => [
-					'right' => [
-						'title' => esc_html__( 'Left', 'elementor-pricing-card' ),
-						'icon' => 'eicon-text-align-left',
-					],
-					'left' => [
-						'title' => esc_html__( 'Right', 'elementor-pricing-card' ),
-						'icon' => 'eicon-text-align-right',
-					],
-				],
-				'default' => 'center',
-				'toggle' => true,
-				'selectors' => [
-					'{{WRAPPER}} .offer-card-inner' => 'margin: unset; margin-{{VALUE}}: auto;',
-					'{{WRAPPER}} .more-offer' => 'margin: unset; margin-{{VALUE}}: auto; margin-top: 18px;',
-
-				],
 			]
 		);
 
@@ -373,14 +340,6 @@ class Elementor_pricingCard_Widget extends \Elementor\Widget_Base {
 			]
 		);
 
-		$this->add_group_control(
-			\Elementor\Group_Control_Typography::get_type(),
-			[
-				'label' => esc_html__( 'Min & Max Text', 'elementor-pricing-card' ),
-				'name' => 'intervalMinMax_typography',
-				'selector' => '{{WRAPPER}} .access-offer-ruler .range .recipients-data',
-			]
-		);
 
 		$this->add_group_control(
 			\Elementor\Group_Control_Typography::get_type(),
@@ -394,18 +353,9 @@ class Elementor_pricingCard_Widget extends \Elementor\Widget_Base {
 		$this->add_group_control(
 			\Elementor\Group_Control_Typography::get_type(),
 			[
-				'label' => esc_html__( 'Offer Price Top Text', 'elementor-pricing-card' ),
+				'label' => esc_html__( 'Offer Price Right Text', 'elementor-pricing-card' ),
 				'name' => 'intervaltoptext_typography',
 				'selector' => '{{WRAPPER}} .access-offer-ruler .offer-quick-infos .offer-price-text .txt-black',
-			]
-		);
-
-		$this->add_group_control(
-			\Elementor\Group_Control_Typography::get_type(),
-			[
-				'label' => esc_html__( 'Offer Price Bottom Text', 'elementor-pricing-card' ),
-				'name' => 'intervalbottomtext_typography',
-				'selector' => '{{WRAPPER}} .access-offer-ruler .offer-quick-infos .offer-price-text .txt-blue',
 			]
 		);
 
@@ -453,6 +403,8 @@ class Elementor_pricingCard_Widget extends \Elementor\Widget_Base {
 					'{{WRAPPER}} .access-offer-ruler .rangeslider output' => 'background-color: {{VALUE}}',
 					'{{WRAPPER}} .access-offer-ruler .offer-cartridge' => 'border-color: {{VALUE}}',
 					'{{WRAPPER}} .access-offer-ruler .rangeslider output:after' => 'border-top-color: {{VALUE}}',
+					'{{WRAPPER}} .access-offer-ruler .more-offer' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .access-offer-ruler .more-offer svg .s0, {{WRAPPER}} .access-offer-ruler .more-offer svg .s1' => 'stroke: {{VALUE}}',
 				],
 			]
 		);
@@ -500,29 +452,6 @@ class Elementor_pricingCard_Widget extends \Elementor\Widget_Base {
 			]
 		);
 
-		$this->add_control(
-			'max-width',
-			[
-				'label' => esc_html__( 'Max Card Width', 'elementor-pricing-card' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 1000,
-						'step' => 5,
-					]
-				],
-				'default' => [
-					'unit' => 'px',
-					'size' => 523,
-				],
-				'selectors' => [
-					'{{WRAPPER}} .access-offer-ruler .offer-card .offer-card-inner' => 'max-width: {{SIZE}}{{UNIT}};',
-					'{{WRAPPER}} .access-offer-ruler .more-offer' => 'max-width: {{SIZE}}{{UNIT}};',
-				],
-			]
-		);
 
 		$this->end_controls_section();
 
@@ -554,53 +483,95 @@ class Elementor_pricingCard_Widget extends \Elementor\Widget_Base {
 				data-intervals="<?php echo htmlspecialchars(json_encode($settings['intervals'])); ?>"
             >
               <div class="offer-card-inner">
-				<div class="header">
-					<img src="<?php echo PRICING_CARD_WIDGET_URL; ?>assets/images/cartoon.png" alt="CARTOON IMAGE">
-					<span class="offer-cartridge"><?php echo $settings['intervals'][0]['interval_label']; ?></span>
-				</div>
-				<div class="body">
-				<div class="heading">
-                    <h3 class="offer-name"><?php echo $settings['intervals'][0]['interval_title']; ?></h3>
-                  </div>
-    
-                  <!-- Range Slider -->
-                  <div class="range"  
-                  >
-                      <div class="rangeslider rangeslider--horizontal" id="js-rangeslider-0">
-                        <div class="rangeslider__fill" ></div>
-                        <div class="rangeslider__handle" >
-                          <output class="js-output">
-                            <?php echo $settings['intervals'][0]['radio_text']; ?>
-                          </output>
-                        </div>
-                      </div>
-                      
-                  </div>
-                  <!-- / Range Slider -->
-    
-                  <div class="offer-quick-infos">
-                      <div class="offer-price "><?php echo $settings['intervals'][0]['pricing']; ?></div>
-                      <div class="offer-price-text">
-						<div class="txt-black">
-							<?php echo $settings['intervals'][0]['pricing_top_text']; ?>
+					<div class="header left">
+						<div class="heading">
+							<h3 class="offer-name"><?php echo $settings['intervals'][0]['interval_title']; ?></h3>
+							<span class="offer-cartridge"><?php echo $settings['intervals'][0]['interval_label']; ?></span>
 						</div>
-                      </div>
-                  </div>
-				  <a href="<?php echo $settings['intervals'][0]['button_link']['url']; ?>" class="offer_cta" type="button" data-initial-label="Sélectionner" ><?php echo $settings['intervals'][0]['button_text']; ?></a>
-				</div>
-				<div class="description">
-                  	<?php echo $settings['intervals'][0]['interval_description']; ?>
-				  </div>
+						<img src="<?php echo PRICING_CARD_WIDGET_URL; ?>assets/images/cartoon.png" alt="CARTOON IMAGE">
+					</div>
+					<div class="right">
+						<div class="body">
+							<!-- Range Slider -->
+							<div class="range"  
+							>
+								<div class="rangeslider rangeslider--horizontal" id="js-rangeslider-0">
+									<div class="rangeslider__fill" ></div>
+									<div class="rangeslider__handle" >
+									<output class="js-output">
+										<?php echo $settings['intervals'][0]['radio_text']; ?>
+									</output>
+									</div>
+								</div>
+								
+							</div>
+							<!-- / Range Slider -->
+				
+							<div class="offer-quick-infos">
+								<div class="offer-price "><?php echo $settings['intervals'][0]['pricing']; ?></div>
+								<div class="offer-price-text">
+									<div class="txt-black">
+										<?php echo $settings['intervals'][0]['pricing_top_text']; ?>
+									</div>
+								</div>
+							</div>
+							<a href="<?php echo $settings['intervals'][0]['button_link']['url']; ?>" class="offer_cta" type="button" data-initial-label="Sélectionner" ><?php echo $settings['intervals'][0]['button_text']; ?></a>
+						</div>
+						<div class="description">
+							<?php echo $settings['intervals'][0]['interval_description']; ?>
+						</div>
+					</div>
+
               </div>
           </div>
 		  <div class="more-offer">
-			<h3>
-			<?php echo $settings['bottom_block_descripton']; ?>
-			</h3>
-			<p>
-				<a <?php echo $this->get_render_attribute_string( 'bottom_block_link' ); ?>><?php echo $settings['bottom_block_link_title']; ?></a>
-				<?php echo $settings['bottom_block_link_title_addon']; ?>
-			</p>
+			<div class="bottom-left">
+				<h3>
+				<?php echo $settings['bottom_block_descripton']; ?>
+				</h3>
+				<p>
+					<?php echo $settings['bottom_block_link_title_addon']; ?>
+				</p>
+			</div>
+
+			<a <?php echo $this->get_render_attribute_string( 'bottom_block_link' ); ?>>
+					<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" width="28" height="28">
+						<style>
+							.s0 { fill: none;stroke: #ffc105;stroke-miterlimit:10;stroke-width: 1.7 } 
+							.s1 { fill: none;stroke: #ffc105;stroke-miterlimit:10;stroke-width: .9 } 
+						</style>
+						<g id="OLD">
+						</g>
+						<g id="Calque 1">
+						</g>
+						<g id="ELEMENTS">
+							<g id="&lt;Group&gt;">
+							</g>
+							<g id="&lt;Group&gt;">
+								<g id="&lt;Group&gt;">
+									<g id="&lt;Group&gt;">
+										<g id="&lt;Group&gt;">
+										</g>
+									</g>
+									<g id="&lt;Group&gt;">
+										<g id="&lt;Group&gt;">
+										</g>
+										<g id="&lt;Group&gt;">
+										</g>
+									</g>
+									<g id="&lt;Group&gt;">
+										<g id="&lt;Group&gt;">
+										</g>
+									</g>
+								</g>
+							</g>
+							<g id="&lt;Group&gt;">
+							</g>
+							<path id="&lt;Path&gt;" class="s0" d="m11.5 7.5l7.9 6.3-7.9 6.3"/>
+							<path id="&lt;Path&gt;" class="s1" d="m27.1 13.8c0-7.2-5.8-13-13-13-7.2 0-13 5.8-13 13 0 7.2 5.8 13 13 13 7.2 0 13-5.8 13-13z"/>
+						</g>
+					</svg>
+				</a>
 		  </div>
         </div>
         <?php

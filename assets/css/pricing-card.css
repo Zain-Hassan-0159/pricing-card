@@ -2,25 +2,46 @@
   font-family: "Montserrat", sans-serif;
 }
 .access-offer-ruler .offer-card .offer-card-inner {
-    max-width: 523px;
-    border: 1px solid #ccdaff;
+    display: flex;
+    gap: 20px;
+    /* max-width: 523px; */
     border-radius: 17px;
     /* padding: 32px 50px; */
   }
+  .access-offer-ruler .offer-card .offer-card-inner .left, .access-offer-ruler .offer-card .offer-card-inner .right{
+    flex: 1;
+    border: 1px solid #ccdaff;
+    border-radius: 17px;
+
+
+  }
   .access-offer-ruler .offer-card .header{
-    padding: 32px 50px 0;
+    padding: 0;
     background-color: #eceff8;
     border-top-right-radius: 17px;
     border-top-left-radius: 17px;
     position: relative;
     text-align: center;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
+  }
+
+  .access-offer-ruler .offer-card .header .heading{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    text-align: left;
+  }
+
+  .access-offer-ruler .offer-card .header .heading h3{
+    margin: 0;
   }
 
   .offer-card-inner, .more-offer{
     margin: auto;
+    display: flex;
+    justify-content: space-between;
   }
   .access-offer-ruler .offer-card .body{
     padding: 10px 50px 10px;
@@ -30,17 +51,7 @@
   .access-offer-ruler .description{
     padding: 10px 50px 32px;
   }
-  .access-offer-ruler .offer-card .offer-card-inner .heading {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+
   .access-offer-ruler .offer-card .offer-card-inner .offer-quick-infos .offer-price-text {
     font-weight: normal;
   }
@@ -63,9 +74,6 @@
     border: solid 1px #ffc105;
     padding: 4px 8px;
     border-radius: 10rem;
-    position: absolute;
-    right: 30px;
-    top: 30px;
   }
   .access-offer-ruler .offer-name {
     font-size: 21px;
@@ -114,21 +122,6 @@
     border-radius: 50%;
     outline: 4px solid #ffc10536;
   }
-  /* .access-offer-ruler .rangeslider .rangeslider__handle:after {
-    content: "";
-    display: block;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-radius: 50%;
-    width: 26px;
-    height: 26px;
-    background: #ffcd058a;
-
-  } */
   .access-offer-ruler .rangeslider output {
     color: #3a3a3a;
     background: #ffc105;
@@ -171,7 +164,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 5px;
+    gap: 25px;
     align-items: baseline;
   }
   .access-offer-ruler .offer-quick-infos .offer-price {
@@ -228,7 +221,7 @@
 
 
   .access-offer-ruler .more-offer{
-    max-width: 523px;
+    /* max-width: 523px; */
     padding: 22px 32px;
     border: 1px solid #ffc105;
     border-radius: 17px;
@@ -250,4 +243,60 @@
   .access-offer-ruler .more-offer p a{
     color: #7b7a7a;
     text-decoration: underline;
+  }
+
+  .access-offer-ruler .more-offer  .bottom-left{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+  }
+
+  @media(max-width: 560px){
+    .access-offer-ruler .offer-card .offer-card-inner{
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .access-offer-ruler .offer-card .offer-card-inner .left{
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      border-bottom: none;
+    }
+
+    .access-offer-ruler .offer-card .offer-card-inner .right{
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      border-top: none;
+    }
+
+    .access-offer-ruler .offer-card .offer-card-inner .left img{
+      margin-top: 20px;
+      max-width: 60%;
+    }
+
+    .access-offer-ruler .offer-name{
+      font-size: 18px;
+    }
+
+    .access-offer-ruler .offer-card .header .heading{
+      right: 15px;
+      left: inherit;
+      top: 15px;
+    }
+
+    .access-offer-ruler .offer-name{
+      line-height: 30px;
+    }
+
+    .access-offer-ruler .more-offer h3{
+      font-size: 14px;
+    }
+
+    .access-offer-ruler .more-offer .bottom-left{
+      gap: 10px;
+    }
+
+    .access-offer-ruler .more-offer{
+      margin-top: 10px;
+    }
   }
